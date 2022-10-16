@@ -79,6 +79,32 @@ p,a{
 
 }
 
+.navegacion{
+
+    position: absolute;
+    left: 0;
+    top: 70px;
+    background-color: var(--blanco);
+    width: 100%;
+
+}
+
+.navegacion a{
+
+    display: block;
+    font-size: 2rem;
+    padding: 1.1rem;
+    color: var(--oscuro);
+    text-decoration: none;
+
+}
+
+@media (min-width: 768px) {
+
+
+
+}
+
 .hamburguesa span{
 
     width: 5rem;
