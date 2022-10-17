@@ -46,10 +46,25 @@ p,a{
 
 }
 
-/* encabezado */
-.encabezado{
+@keyframes desplazamiento {
 
-    background-image: url('');
+    0%{
+
+        transform: translateX(-100%);
+
+    }
+
+    100%{
+
+        transform: translateX(0);
+    }
+
+}
+
+/* encabezado */
+.encabezados{
+
+    background-image: url('../img/fondo.jpg');
     background-repeat: no-repeat;
     height: 100vh;
     min-height: 70rem;
@@ -86,7 +101,17 @@ p,a{
     top: 70px;
     background-color: var(--blanco);
     width: 100%;
+    animation: desplazamiento .5s ease-in-out;
 
+}
+
+@media(min-width: 768px){
+
+    .ocultar{
+
+        display: inline;
+
+    }
 }
 
 .navegacion a{
@@ -96,14 +121,35 @@ p,a{
     padding: 1.1rem;
     color: var(--oscuro);
     text-decoration: none;
+    transition: background-color .3s ease-in-out;
 
 }
 
-@media (min-width: 768px) {
+.navegacion a:hover{
 
-
-
+    background-color: var(--azulClaro);
+    color: var(--blanco);
 }
+
+@media(min-width: 768px){
+    .navegacion a{
+
+        display: inline;
+
+    }
+
+    .navegacion{
+
+        position: relative;
+        top: unset;
+        width: auto;
+        background-color: unset;
+        animation: unset;
+    }
+}
+
+
+
 
 .hamburguesa span{
 
@@ -113,4 +159,14 @@ p,a{
     background-color: var(--oscuro);
     display: block;
     
+}
+
+@media (min-width: 768px) {
+
+    .hamburguesa{
+
+        display: none;
+
+    }
+
 }
