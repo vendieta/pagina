@@ -46,10 +46,51 @@ p,a{
 
 }
 
-/* encabezado */
-.encabezado{
+.contenedor{
 
-    background-image: url('');
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+
+}
+
+.btn{
+
+    padding: 1rem 4rem;
+    font-weight: bold;
+    font-family: var(--parrafos);
+    font-size: 2rem;
+    border: none;
+    color: var(--blanco);
+
+}
+
+.azul{
+
+    background-color: var(--azulClaro);
+
+}
+
+
+@keyframes desplazamiento {
+
+    0%{
+
+        transform: translateX(-100%);
+
+    }
+
+    100%{
+
+        transform: translateX(0);
+    }
+
+}
+
+/* encabezado */
+.encabezados{
+
+    background-image: url('../img/fondo.jpg');
     background-repeat: no-repeat;
     height: 100vh;
     min-height: 70rem;
@@ -100,7 +141,17 @@ p,a{
     top: 70px;
     background-color: var(--blanco);
     width: 100%;
+    animation: desplazamiento .5s ease-in-out;
 
+}
+
+@media(min-width: 768px){
+
+    .ocultar{
+
+        display: inline;
+
+    }
 }
 
 .navegacion a{
@@ -121,11 +172,25 @@ p,a{
     color: var(--blanco);
 }
 
-@media (min-width: 768px) {
+@media(min-width: 768px){
+    .navegacion a{
 
+        display: inline;
 
+    }
 
+    .navegacion{
+
+        position: relative;
+        top: unset;
+        width: auto;
+        background-color: unset;
+        animation: unset;
+    }
 }
+
+
+
 
 .hamburguesa span{
 
@@ -136,3 +201,80 @@ p,a{
     display: block;
     
 }
+
+@media (min-width: 768px) {
+
+    .hamburguesa{
+
+        display: none;
+
+    }
+
+}
+
+
+
+
+/*! contenido del encabezado */
+
+@media(min-width: 768px){
+
+    .contenido-encabezado{
+        display:flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.texto-encabezado h1{
+
+    font-size: 3rem;
+    text-align: center;
+    color: var(--blanco);
+    padding-top: 8rem;
+
+}
+
+.formulario-encabezado{
+
+    background-color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    border-radius: .5rem;
+
+}
+
+.formulario-encabezado h2{
+
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+
+}
+
+.input-encabezado{
+
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.input-encabezado input{
+
+    width: 100%;
+    padding: 0 1.6rem;
+    height: 4.8rem;
+    border: 1px solid #f1f1f1;
+    border-radius: .5rem;
+    font-family: var(--parrafos);
+    outline: none;
+
+}
+
+
+
+
+
+
+
