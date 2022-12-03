@@ -65,7 +65,7 @@ p,a{
 
 }
 
-.btn::hover{
+.btn:hover{
 
     cursor:pointer;
     
@@ -300,7 +300,94 @@ p,a{
 }
 
 
+/* !  ventajas */
 
+@media( min-width: 768px){
+    .contenido-ventajas{
+
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+
+    }
+}
+
+.ventajas{
+
+    padding: 5rem;
+    background-color: var(--azulOscuro);
+
+}
+
+.ventaja{
+
+    text-align: center;
+    color: var(--blanco);
+
+}
+
+.ventaja i{
+
+    font-size: 4rem;
+
+}
+
+.ventaja h3{
+
+    font-size: 2.5rem;
+
+}
+
+.ventaja p{
+
+    font-size: 2rem;
+    
+}
+
+/*! section nosotros */
+
+.nosotros h2{
+
+    text-align: center;
+    font-size: 4rem;
+    color: var(--azulClaro);
+
+}
+
+@media( min-width: 768px){
+
+    .nosotros h2{
+
+        font-size: 5rem;
+
+    }
+
+}
+
+.contenido-nosotros{
+
+    background-image: url();
+    display: grid;
+    grid-template-rows: repeat();
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.texto-nosotros{
+
+    grid-row: 2/3;
+    background-color: var(--blanco);
+
+}
+
+.texto-nosotros h3{
+
+    font-size: 3rem;
+    color: var(--azulClaro);
+    text-align: center;
+    
+}
 
 
 
